@@ -1,0 +1,18 @@
+[project]
+name = "clearledger"
+version = "0.1.0"
+description = "Lock-safe transfer API with ordered account locks, CAS versions, and idempotent retries."
+requires-python = ">=3.9"
+dependencies = [
+  "fastapi==0.115.6",
+  "uvicorn==0.32.1",
+  "pydantic==2.10.3",
+  "PyJWT==2.10.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.4", "httpx==0.28.1"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
